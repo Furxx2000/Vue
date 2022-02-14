@@ -70,4 +70,11 @@ button:active {
 .outline:active {
   background-color: #edd2ff;
 }
+
+@media (max-width: 425px) {
+  button,
+  a {
+    padding: 0.75rem 1.3rem;
+  }
+} ;
 </style>

@@ -1,6 +1,6 @@
 <template>
   <the-header></the-header>
-  <router-view v-slot="slotProps">
+  <router-view v-slot="slotProps" class="body">
     <transition name="route" mode="out-in">
       <component :is="slotProps.Component"></component>
     </transition>
@@ -69,5 +69,11 @@ body {
 .route-leave-from {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 425px) {
+  .body {
+    padding: 0 1rem;
+  }
 }
 </style>

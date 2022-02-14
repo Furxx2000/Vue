@@ -1,9 +1,11 @@
 <template>
   <header>
     <nav>
-      <h1><router-link to="/">Find a Coach</router-link></h1>
+      <h1 class="app-name"><router-link to="/">Find a Coach</router-link></h1>
       <ul>
-        <li><router-link to="/coaches">All Coaches</router-link></li>
+        <li class="all-coaches">
+          <router-link to="/coaches">All Coaches</router-link>
+        </li>
         <li v-if="isLoggedIn">
           <router-link to="/requests">Requests</router-link>
         </li>
@@ -92,5 +94,19 @@ header ul {
 
 li {
   margin: 0 0.5rem;
+}
+
+@media (max-width: 425px) {
+  .app-name {
+    font-size: 20px;
+  }
+
+  header a {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .all-coaches {
+    display: none;
+  }
 }
 </style>
